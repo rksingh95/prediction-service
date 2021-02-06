@@ -3,7 +3,7 @@ import pymongo as pymongo
 from PIL import Image
 
 myclient = pymongo.MongoClient(
-    "mongodb+srv://rahul:rahul@cluster0.waaxg.mongodb.net/Endoscopic_Guidance?retryWrites=true&w=majority")
+    "mongo_uri")
 # database creation
 db = myclient["Endoscopic_Guidance"]
 
