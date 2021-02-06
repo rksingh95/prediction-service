@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<body style="background-color:powderblue;">
+ <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        img {
+            max-width:40%;
+            height:auto;
+            max-height:40%;
+        }
+    </style>
+
+
+<div class="header">
+  <h1>Select an image for classification</h1>
+  <p></p>
+</div>
+
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+        Label: {{ messages[0] }}
+        Filename: {{ messages[1] }}
+	  {% endif %}
+	{% endwith %}
+</p>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+	<p>
+		<input type="file" name="file" autocomplete="off" required>
+	</p>
+    </dl>
+    <p>
+	<input type="submit" value="Classify">
+
+    </p>
+</form>
+</body>

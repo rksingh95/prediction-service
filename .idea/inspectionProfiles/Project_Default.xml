@@ -1,0 +1,154 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="position" />
+            <item index="1" class="java.lang.String" itemvalue="right" />
+            <item index="2" class="java.lang.String" itemvalue="top" />
+            <item index="3" class="java.lang.String" itemvalue="top:5px" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="10">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="style" />
+            <item index="7" class="java.lang.String" itemvalue="p" />
+            <item index="8" class="java.lang.String" itemvalue="type" />
+            <item index="9" class="java.lang.String" itemvalue="body" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.4" />
+            <item index="2" class="java.lang.String" itemvalue="3.5" />
+            <item index="3" class="java.lang.String" itemvalue="3.6" />
+            <item index="4" class="java.lang.String" itemvalue="3.7" />
+            <item index="5" class="java.lang.String" itemvalue="3.9" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="60">
+            <item index="0" class="java.lang.String" itemvalue="greenlet" />
+            <item index="1" class="java.lang.String" itemvalue="gevent" />
+            <item index="2" class="java.lang.String" itemvalue="uWSGI" />
+            <item index="3" class="java.lang.String" itemvalue="Django" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="5" class="java.lang.String" itemvalue="dash" />
+            <item index="6" class="java.lang.String" itemvalue="h-html-components" />
+            <item index="7" class="java.lang.String" itemvalue="hyperlink" />
+            <item index="8" class="java.lang.String" itemvalue="protobuf" />
+            <item index="9" class="java.lang.String" itemvalue="autopep8" />
+            <item index="10" class="java.lang.String" itemvalue="pip-licenses" />
+            <item index="11" class="java.lang.String" itemvalue="amqp" />
+            <item index="12" class="java.lang.String" itemvalue="cffi" />
+            <item index="13" class="java.lang.String" itemvalue="pandas" />
+            <item index="14" class="java.lang.String" itemvalue="django" />
+            <item index="15" class="java.lang.String" itemvalue="celery" />
+            <item index="16" class="java.lang.String" itemvalue="pyzmq" />
+            <item index="17" class="java.lang.String" itemvalue="virtualenv" />
+            <item index="18" class="java.lang.String" itemvalue="cfgv" />
+            <item index="19" class="java.lang.String" itemvalue="google-auth" />
+            <item index="20" class="java.lang.String" itemvalue="locust" />
+            <item index="21" class="java.lang.String" itemvalue="nodeenv" />
+            <item index="22" class="java.lang.String" itemvalue="factory-boy" />
+            <item index="23" class="java.lang.String" itemvalue="identify" />
+            <item index="24" class="java.lang.String" itemvalue="brotli" />
+            <item index="25" class="java.lang.String" itemvalue="pre-commit" />
+            <item index="26" class="java.lang.String" itemvalue="cryptography" />
+            <item index="27" class="java.lang.String" itemvalue="whitenoise" />
+            <item index="28" class="java.lang.String" itemvalue="django-extensions" />
+            <item index="29" class="java.lang.String" itemvalue="django-silk" />
+            <item index="30" class="java.lang.String" itemvalue="attrs" />
+            <item index="31" class="java.lang.String" itemvalue="faker" />
+            <item index="32" class="java.lang.String" itemvalue="google-api-python-client" />
+            <item index="33" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="34" class="java.lang.String" itemvalue="django-cors-headers" />
+            <item index="35" class="java.lang.String" itemvalue="google-api-core" />
+            <item index="36" class="java.lang.String" itemvalue="django-storages" />
+            <item index="37" class="java.lang.String" itemvalue="zipp" />
+            <item index="38" class="java.lang.String" itemvalue="toml" />
+            <item index="39" class="java.lang.String" itemvalue="psutil" />
+            <item index="40" class="java.lang.String" itemvalue="pygments" />
+            <item index="41" class="java.lang.String" itemvalue="django-celery-beat" />
+            <item index="42" class="java.lang.String" itemvalue="asgiref" />
+            <item index="43" class="java.lang.String" itemvalue="reportlab" />
+            <item index="44" class="java.lang.String" itemvalue="zope.interface" />
+            <item index="45" class="java.lang.String" itemvalue="channels" />
+            <item index="46" class="java.lang.String" itemvalue="djangorestframework-simplejwt" />
+            <item index="47" class="java.lang.String" itemvalue="certifi" />
+            <item index="48" class="java.lang.String" itemvalue="pillow" />
+            <item index="49" class="java.lang.String" itemvalue="django-allauth" />
+            <item index="50" class="java.lang.String" itemvalue="pytz" />
+            <item index="51" class="java.lang.String" itemvalue="urllib3" />
+            <item index="52" class="java.lang.String" itemvalue="daphne" />
+            <item index="53" class="java.lang.String" itemvalue="h5py" />
+            <item index="54" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="55" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="56" class="java.lang.String" itemvalue="keras" />
+            <item index="57" class="java.lang.String" itemvalue="django-tinymce" />
+            <item index="58" class="java.lang.String" itemvalue="msgpack" />
+            <item index="59" class="java.lang.String" itemvalue="geventhttpclient" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="dict.email" />
+          <option value="tuple.__getitem__" />
+          <option value="str.get_rec_type_display" />
+          <option value="int.timedelta" />
+          <option value="treatment.admin.old_keys.exclude" />
+          <option value="treatment.admin.old_keys.filter" />
+          <option value="bool.filter" />
+          <option value="dict.__add__" />
+          <option value="object.predict" />
+          <option value="dict.save" />
+          <option value="list.get" />
+          <option value="dict.get_json" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
