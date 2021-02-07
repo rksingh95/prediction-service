@@ -7,5 +7,22 @@ Image is updated and loaded on MongoDB for future use and the user gets a respon
 
 
 #NASNET MODEL PREDICTION
+
+Image is updated and loaded on MongoDB for future use and the user gets a response of the predicted lable while using service and upload image for prediction.
+
+
+
+#NASNET MODEL PREDICTION
 ![banner](https://raw.githubusercontent.com/rksingh95/MLPredictModelFlask/master/static/images/predictions.jpg)
-![banner](https://raw.githubusercontent.com/rksingh95/MLPredictModelFlask/master/static/images/response.jpg)
+
+#POST response via using serivce:
+
+Input request POST with from data as image file that needs to be classfied.
+
+*[http://127.0.0.1:5000/upload-image/]
+  
+  `{
+    "Given class of image is ": "Dyed-lifted-polyps"
+  }`
+  
+![banner](https://raw.githubusercontent.com/rsingh89/MLPredictModelFlask/static/images/response.png)
