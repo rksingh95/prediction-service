@@ -8,4 +8,4 @@ Image is updated and loaded on MongoDB for future use and the user gets a respon
 
 #NASNET MODEL PREDICTION
 ![banner](https://raw.githubusercontent.com/rksingh95/MLPredictModelFlask/master/static/images/predictions.jpg)
-![banner](https://raw.githubusercontent.com/rksingh95/MLPredictModelFlask/master/static/images/response.jpg)
+![banner](https://raw.githubusercontent.com/rsingh89/MLPredictModelFlask/master/static/images/response.jpg)
