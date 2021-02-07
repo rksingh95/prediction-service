@@ -1,6 +1,6 @@
 from flask import Flask
 
-UPLOAD_FOLDER = 'C:/Users/Rahul Singh/PycharmProjects/flaskProject'
+UPLOAD_FOLDER = '/Users/sikarwar07/PycharmProjects/MLPredictModelFlask'
 
 app = Flask(__name__)
 app.secret_key = "secret key"

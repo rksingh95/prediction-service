@@ -1,11 +1,12 @@
+import json
 import os
 
 from app import app
-from flask import render_template, request, redirect, flash
+from flask import render_template, request
 from werkzeug.utils import secure_filename
 
 from classifier import getPrediction
-from mongo_db import upload_image_data_mongodb
+
 
 
 @app.route('/')
@@ -13,26 +14,44 @@ def index():
     return render_template('about.html')
 
 
-@app.route('/', methods=['POST'])
+@app.route('/upload-image/', methods=['POST'])
 def submit_file():
     if request.method == 'POST':
         if 'file' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
+            data = "File not found in request body"
+            response = app.response_class(
+                response=json.dumps(data),
+                mimetype='application/json'
+            )
+            # flash('No file part')
+            # return redirect(request.url)
+            return response
         file = request.files['file']
         if file.filename == '':
-            flash('No file selected for uploading')
-            return redirect(request.url)
+            data = 'No file selected for uploading'
+            response = app.response_class(
+                response=json.dumps(data),
+                mimetype='application/json'
+            )
+            # flash('No file selected for uploading')
+            # return redirect(request.url)
+            return response
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             # upload images to DB
-            upload_image_data_mongodb(file)
+            # upload_image_data_mongodb(file)
             label = getPrediction.processImg(filename)
-            flash({"Given class of image is ": label})
-            if remove_img(path=r"C:\Users\Rahul Singh\PycharmProjects\flaskProject", img_name=file.filename):
+            # flash({"Given class of image is ": label})
+            data = {"Given class of image is ": label}
+            response = app.response_class(
+                response=json.dumps(data),
+                mimetype='application/json'
+            )
+            if remove_img(path=os.path.join(app.config['UPLOAD_FOLDER']), img_name=file.filename):
                 print('Image removed')
-            return redirect('/')
+            # return redirect('/')
+            return response
 
 
 def remove_img(path, img_name):

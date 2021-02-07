@@ -41,8 +41,10 @@ def evaluate_image(model_path, class_path, valididation_path, image_size):
 
 
 def processImg(img_path):
-    return evaluate_image(model_path=r'D:\GPUTrained\NASNetLarge\NESNetLarge_64B/NASNet_64B_331x331.h5',
-                          class_path=r'D:\GPUTrained\NASNetLarge\NESNetLarge_64B/NASNet_64B_331x331.pkl',
+    return evaluate_image(model_path=r'/Users/sikarwar07/PycharmProjects/MLPredictModelFlask/models'
+                                     r'/NASNet_32B_331x331.h5',
+                          class_path=r'/Users/sikarwar07/PycharmProjects/MLPredictModelFlask/models'
+                                     r'/NASNet_32B_331x331.pkl',
                           valididation_path=img_path,
                           image_size=331)
 
