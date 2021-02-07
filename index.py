@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 from classifier import getPrediction
 
 
-
+# Rendering HTML to ulpoad the image for prediction
 @app.route('/')
 def index():
     return render_template('about.html')
@@ -18,9 +18,10 @@ def index():
 def submit_file():
     if request.method == 'POST':
         if 'file' not in request.files:
-            data = "File not found in request body"
+            data = {"detail_error": 'File keyword not found in request body'}
             response = app.response_class(
                 response=json.dumps(data),
+                status=400,
                 mimetype='application/json'
             )
             # flash('No file part')
@@ -28,9 +29,10 @@ def submit_file():
             return response
         file = request.files['file']
         if file.filename == '':
-            data = 'No file selected for uploading'
+            data = {"detail_error": 'No file selected for uploading'}
             response = app.response_class(
                 response=json.dumps(data),
+                status=400,
                 mimetype='application/json'
             )
             # flash('No file selected for uploading')
