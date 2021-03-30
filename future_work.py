@@ -1,4 +1,4 @@
-
+#
 # TODO Future implantation
 # Create image prediction in tabular format
 #     # Read image
