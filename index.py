@@ -5,8 +5,8 @@ from app import app
 from flask import render_template, request
 from werkzeug.utils import secure_filename
 
+from static.static_var import prediction_classs
 from classifier import getPrediction
-
 
 
 @app.route('/')
@@ -42,16 +42,28 @@ def submit_file():
             # upload images to DB
             # upload_image_data_mongodb(file)
             label = getPrediction.processImg(filename)
-            # flash({"Given class of image is ": label})
-            data = {"Given class of image is ": label}
-            response = app.response_class(
-                response=json.dumps(data),
-                mimetype='application/json'
-            )
+            # Remove locally stored file
             if remove_img(path=os.path.join(app.config['UPLOAD_FOLDER']), img_name=file.filename):
                 print('Image removed')
+            if label in prediction_classs:
+                # flash({"Given class of image is ": label})
+                data = {"Given class of image is ": label}
+                response = app.response_class(
+                    response=json.dumps(data),
+                    mimetype='application/json'
+                )
+                return response
+            else:
+                # Other response than the expected
+                data = {"Error ": label}
+                response = app.response_class(
+                    response=json.dumps(data),
+                    mimetype='application/json',
+                    status=400
+                )
+                return response
+
             # return redirect('/')
-            return response
 
 
 def remove_img(path, img_name):

@@ -5,7 +5,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.7 (MLPredictModelFlask)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (ML_ModelPrediction)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
