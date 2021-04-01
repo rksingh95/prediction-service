@@ -28,28 +28,28 @@ Response:
 
 Response Json:
 
-  [
-     {
-         "file_name": "ileum_0_7352.jpg",
-         "predicted_label": "ileum",
-         "predicted_time": "01-Apr-2021 (18:44:33.998778)"
-     },
-     {
-         "file_name": "bbps-0-1_0_9233.jpg",
-         "predicted_label": "bbps-0-1",
-         "predicted_time": "01-Apr-2021 (18:45:38.009416)"
-     },
-     {
-         "file_name": "bbps-2-3_0_7472.jpg",
-         "predicted_label": "bbps-2-3",
-         "predicted_time": "01-Apr-2021 (18:46:30.757385)"
-     },
-     {
-         "file_name": "z-line_0_8973.jpg",
-         "predicted_label": "z-line",
-         "predicted_time": "01-Apr-2021 (18:47:15.678880)"
-     }
- ]
+          [
+             {
+                 "file_name": "ileum_0_7352.jpg",
+                 "predicted_label": "ileum",
+                 "predicted_time": "01-Apr-2021 (18:44:33.998778)"
+             },
+             {
+                 "file_name": "bbps-0-1_0_9233.jpg",
+                 "predicted_label": "bbps-0-1",
+                 "predicted_time": "01-Apr-2021 (18:45:38.009416)"
+             },
+             {
+                 "file_name": "bbps-2-3_0_7472.jpg",
+                 "predicted_label": "bbps-2-3",
+                 "predicted_time": "01-Apr-2021 (18:46:30.757385)"
+             },
+             {
+                 "file_name": "z-line_0_8973.jpg",
+                 "predicted_label": "z-line",
+                 "predicted_time": "01-Apr-2021 (18:47:15.678880)"
+             }
+         ]
 
     
 
