@@ -46,7 +46,7 @@ def submit_file():
                 return valid_error_response(label)
             else:
                 return invalid_error_response(label)
-            # return redirect('/')
+            # return redirect(PIL'/')
 
 
 @app.route('/prediction-history/', methods=['GET'])

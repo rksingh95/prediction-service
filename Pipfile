@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-cv2 = "*"
+opencv-python = "*"
 pymongo = "*"
 
 [requires]

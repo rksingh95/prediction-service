@@ -1,0 +1,18 @@
+name: ML_ModelPrediction
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.5
+  - click==7.1.2
+  - flask==1.1.2
+  - itsdangerous==1.1.0
+  - jinja2==2.11.3
+  - pillow=8.1.2
+  - numpy==1.18.5
+  - tensorflow==2.3.0
+  - markupsafe==1.1.1
+  - pymongo==3.11.3
+  - dnspython==2.0.0
+  - werkzeug==1.0.1
+
