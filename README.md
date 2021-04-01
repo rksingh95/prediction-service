@@ -26,7 +26,7 @@ Response:
 ## GET Service 
 * http://127.0.0.1:5000/prediction-history/
 
-Response Json:
+Response Json from monogo DB:
 
           [
              {
