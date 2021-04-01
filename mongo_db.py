@@ -1,3 +1,4 @@
+import datetime
 import io
 import json
 from typing import Dict
@@ -26,10 +27,14 @@ def convert_image_to_byte_array(file, label) -> Dict[str, bytes]:
     im = Image.open(file)
     image_bytes = io.BytesIO()
     im.save(image_bytes, format='JPEG')
+    dateTimeObj = datetime.datetime.now()
+    timestampStr = dateTimeObj.strftime("%d-%b-%Y (%H:%M:%S.%f)")
+
     image = {
         'data': image_bytes.getvalue(),
         'file_name': file.filename,
-        'predicted_label': label
+        'predicted_label': label,
+        'predicted_time': timestampStr
     }
     return image
 
