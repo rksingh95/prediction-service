@@ -44,6 +44,16 @@ def invalid_model_path_response(data) -> json:
     return response
 
 
+def invalid_method_response() -> json:
+    data = {"detail_error": "requested method service is not supported by the application"}
+    response = app.response_class(
+        response=json.dumps(data),
+        status=400,
+        mimetype='application/json'
+    )
+    return response
+
+
 def remove_img(path, img_name) -> json:
     os.remove(path + '/' + img_name)
     # check if file exists or not

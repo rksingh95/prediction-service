@@ -6,13 +6,13 @@ from flask import request
 from werkzeug.utils import secure_filename
 
 from mongo_db import upload_image_data_mongodb, get_prediction_data
-from static.static_var import prediction_classs
+from static.static_var import PREDICTION_CLASS, POST_METHOD, GET_METHOD
 from classifier import getPrediction
 from utils import valid_error_response, invalid_error_response, invalid_file_error_response, remove_img, \
-    invalid_model_path_response
+    invalid_model_path_response, invalid_method_response
 
 
-@app.route('/upload-image/', methods=['POST'])
+@app.route('/upload-image/', methods=POST_METHOD)
 def submit_file() -> json:
     """
     Accepting  payload of the image and then it performs three tasks:
@@ -22,7 +22,7 @@ def submit_file() -> json:
     :return: valid or invalid responses depending on the requirements
     """
 
-    if request.method == 'POST':
+    if request.method == POST_METHOD[0]:
         uploaded_file = request.files.get('', None)
         filename = uploaded_file.filename
         # Validate if file is present
@@ -42,21 +42,24 @@ def submit_file() -> json:
             # Remove locally stored file
             remove_img(path=os.path.join(app.config['UPLOAD_FOLDER']), img_name=filename)
 
-            if label in prediction_classs:
+            if label in PREDICTION_CLASS:
                 # To make sure that we receive the labels from prediction class
                 return valid_error_response(label)
             else:
                 return invalid_model_path_response(label)
             # return redirect(PIL'/')
+    return invalid_method_response()
 
 
-@app.route('/prediction-history/', methods=['GET'])
+@app.route('/prediction-history/', methods=GET_METHOD)
 def get_prediction_history() -> dict:
     """
     Gets all the predictions made till now extracting from the data base
     :return:
     """
-    return get_prediction_data()
+    if request.method == GET_METHOD[0]:
+        return get_prediction_data()
+    return invalid_method_response()
 
 
 if __name__ == "__main__":

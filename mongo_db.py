@@ -3,13 +3,10 @@ import io
 import json
 from typing import Dict
 
-import pymongo as pymongo
 from PIL import Image
 
 # Setting up DB connection
-client = pymongo.MongoClient(
-    "mongodb+srv://singh:CMrdUjEgM2iPZGh@cluster0.waaxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = client["Endoscopic_Guidance"]
+from static.static_var import DB, COLUMNS
 
 
 def convert_image_to_byte_array(file, label) -> Dict[str, bytes]:
@@ -41,7 +38,7 @@ def upload_image_data_mongodb(file, label) -> None:
     :param file: byte array of loaded image file
     :return: None
     """
-    prediction = db.images
+    prediction = DB.images
 
     # mongodb server
     imgByteArr = convert_image_to_byte_array(file=file, label=label)
@@ -55,8 +52,7 @@ def get_prediction_data() -> json:
     Gets the data from the database
     :return:
     """
-    col = db["images"]
-    x = col.find()
+    x = COLUMNS.find()
     fetched_data = []
     for data in x:
         data.pop('_id')
