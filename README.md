@@ -4,7 +4,11 @@
 # Docker Image:
 
 https://hub.docker.com/repository/docker/rsingh95/endoscopic_guidance
- 
+
+
+´´´
+docker pull rsingh95/endoscopic_guidance:latest
+´´´
  
  
 # Perdiction of the mutiple trained models (NASNet, RESNET, VGG16 VGG19, DENSENET) to be integrated with micro service using Flask API request.
@@ -16,7 +20,7 @@ Image is updated and loaded on MongoDB for future use, and the user gets a respo
 
 ´´´
 Payload as image file only ion .jpeg format
-´´
+´´´
 
 Response: 
 {
@@ -62,5 +66,4 @@ Image is updated and loaded on MongoDB for future use, and the user gets a respo
 
 
 ## RESNET MODEL PREDICTION
-![banner](https://raw.githubusercontent.com/rksingh95/MLPredictModelFlask/master/static/images/predictions.jpg)
 ![banner](static/images/response.jpg)
