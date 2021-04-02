@@ -41,3 +41,16 @@
 # # cv2.imshow('Predictions', np.concatenate((row1, row2), axis=0))
 # cv2.imwrite('D:/New folder/New folderpredictions_renet50.jpg', np.concatenate((row1, row2), axis=0))
 # cv2.waitKey(0)
+
+# Can be used in the function process_predict_image()
+# TODO CV2 method can also be used instead of Keras for prediction
+# Prediction using CV2
+# image = cv2.imread(validation_path)
+# # Get input reshaped and rescaled
+# image = cv2.resize(image, (image_size, image_size))
+# image_f = image.astype("float") / 255.0
+# image_a = img_to_array(image_f)
+# image_p = np.expand_dims(image_a, axis=0)
+# # Get predictions
+# predictions = model.predict(image_p).ravel()
+# print (predictions)

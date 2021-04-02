@@ -8,11 +8,12 @@ from werkzeug.utils import secure_filename
 from mongo_db import upload_image_data_mongodb, get_prediction_data
 from static.static_var import prediction_classs
 from classifier import getPrediction
-from utils import valid_error_response, invalid_error_response, invalid_file_error_response, remove_img
+from utils import valid_error_response, invalid_error_response, invalid_file_error_response, remove_img, \
+    invalid_model_path_response
 
 
 @app.route('/upload-image/', methods=['POST'])
-def submit_file():
+def submit_file() -> json:
     """
     Accepting  payload of the image and then it performs three tasks:
     1. Image prediction using getPrediction.py file (Script)
@@ -45,12 +46,12 @@ def submit_file():
                 # To make sure that we receive the labels from prediction class
                 return valid_error_response(label)
             else:
-                return invalid_error_response(label)
+                return invalid_model_path_response(label)
             # return redirect(PIL'/')
 
 
 @app.route('/prediction-history/', methods=['GET'])
-def get_prediction_history():
+def get_prediction_history() -> dict:
     """
     Gets all the predictions made till now extracting from the data base
     :return:

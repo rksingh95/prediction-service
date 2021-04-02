@@ -3,7 +3,6 @@ import io
 import json
 from typing import Dict
 
-import gridfs
 import pymongo as pymongo
 from PIL import Image
 
@@ -42,6 +41,7 @@ def convert_image_to_byte_array(file, label) -> Dict[str, bytes]:
 def upload_image_data_mongodb(file, label) -> None:
     """
     Uploads the byte array of the image to DB to used for future reference and its prediction value
+    :param label: predicted label
     :param file: byte array of loaded image file
     :return: None
     """
@@ -54,7 +54,7 @@ def upload_image_data_mongodb(file, label) -> None:
     print(image_id, 'Successfully inserted')
 
 
-def get_prediction_data():
+def get_prediction_data() -> json:
     """
     Gets the data from the database
     :return:
