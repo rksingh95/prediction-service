@@ -6,11 +6,7 @@ from typing import Dict
 import pymongo as pymongo
 from PIL import Image
 
-# client = pymongo.MongoClient("mongodb+srv://singh:<CMrdUjEgM2iPZGh>@cluster0.waaxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-# # database connection
-# db = client["Endoscopic_Guidance"]
-
-
+# Setting up DB connection
 client = pymongo.MongoClient(
     "mongodb+srv://singh:CMrdUjEgM2iPZGh@cluster0.waaxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client["Endoscopic_Guidance"]
