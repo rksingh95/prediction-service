@@ -7,6 +7,7 @@ from PIL import Image
 
 # Setting up DB connection
 from static.static_var import DB, COLUMNS
+from utils import db_timeout_error
 
 
 def convert_image_to_byte_array(file, label) -> Dict[str, bytes]:
@@ -38,13 +39,16 @@ def upload_image_data_mongodb(file, label) -> None:
     :param file: byte array of loaded image file
     :return: None
     """
-    prediction = DB.images
+    try:
+        prediction = DB.images
 
-    # mongodb server
-    imgByteArr = convert_image_to_byte_array(file=file, label=label)
-    # database creation
-    image_id = prediction.insert_one(imgByteArr).inserted_id
-    print(image_id, 'Successfully inserted')
+        # mongodb server
+        imgByteArr = convert_image_to_byte_array(file=file, label=label)
+        # database creation
+        image_id = prediction.insert_one(imgByteArr).inserted_id
+        print(image_id, 'Successfully inserted')
+    except TimeoutError as te:
+        return db_timeout_error(data=te)
 
 
 def get_prediction_data() -> json:

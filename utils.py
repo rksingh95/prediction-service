@@ -34,6 +34,16 @@ def invalid_error_response(data) -> json:
     return response
 
 
+def db_timeout_error(data) -> json:
+    data = {"detail_error": 'Db timeout' + ' ' + data}
+    response = app.response_class(
+        response=json.dumps(data),
+        status=400,
+        mimetype='application/json'
+    )
+    return response
+
+
 def invalid_model_path_response(data) -> json:
     data = {"detail_error": 'Application can not find the trained as' + ' ' + data}
     response = app.response_class(
