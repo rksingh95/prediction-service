@@ -19,7 +19,7 @@ Image is updated and loaded on MongoDB for future use, and the user gets a respo
 * http://127.0.0.1:5000/upload-image/
 
 ´´´
-Payload as image file only ion .jpeg format
+Payload as image file only ion .jpeg format 
 ´´´
 
 Response: 
